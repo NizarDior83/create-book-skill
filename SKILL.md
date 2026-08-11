@@ -184,9 +184,26 @@ Both reuse the character DNA and style descriptor verbatim. See `references/book
 
 ---
 
-## Phase 5 — Deliver
+## Phase 5 — The agent brief
 
-Save the markdown file and hand it over. Then say, in three lines: generate the character sheet first; attach it to every page prompt; regenerate any page whose character looks wrong rather than accepting it, because one off-model page is visible to every reader.
+Produce a second file: a self-contained brief the user hands to whatever agent or assistant generates the images. Do this without being asked. The prompt file tells the agent *what* to draw; the brief tells it *how to work* — and the working method is what actually preserves consistency.
+
+The brief must stand alone. The agent will not see this conversation, the page plan, or your reasoning, so anything left unwritten does not exist for it.
+
+Follow `references/agent-brief.md` for the full template. The parts that carry the weight:
+
+- **Always attach the original character sheet, never the previous page's output.** Chaining outputs compounds error and is the single most common way a book drifts.
+- **Paste prompts verbatim.** A capable agent will otherwise compress the repeated DNA block, which is exactly the failure the repetition prevents.
+- **A consistency check table** naming the specific wrong version of each trait, not just the right one.
+- **The predicted failure** — every style has one thing models get wrong by default. Name it or the agent accepts it.
+- **The hardest page, by number**, so the agent regenerates it without being told.
+- **Every prompt inlined in full** — character sheet, both covers, and all pages. A brief that points at a separate prompt file has failed: the agent will either lose the prompts or work from them while ignoring the rules. Briefs run to thousands of words, and that is correct.
+
+---
+
+## Phase 6 — Deliver
+
+Hand over **two files**: the prompt file and the agent brief. Then say, in three lines: generate the character sheet first; attach it to every page prompt; regenerate any page whose character looks wrong rather than accepting it, because one off-model page is visible to every reader.
 
 Offer one revision pass — a different style, a different page count, or a re-plan.
 
@@ -195,4 +212,5 @@ Offer one revision pass — a different style, a different page count, or a re-p
 ## Reference files
 
 - `references/style-library.md` — style vocabulary by audience and format, line weight and detail density by age band, palette guidance. Read when proposing style options in Batch B or writing format constraints in Phase 4.
+- `references/agent-brief.md` — template for the handoff brief. Read in Phase 5b.
 - `references/book-formats.md` — trim sizes, margins, bleed, page count rules, KDP specifics. Read when setting trim in Batch B or writing layout notes.
